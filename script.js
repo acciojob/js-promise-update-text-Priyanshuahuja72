@@ -9,5 +9,5 @@ function promise1()
         }, 1000)
     })
 }
-promise1();
 }
+promise1();
