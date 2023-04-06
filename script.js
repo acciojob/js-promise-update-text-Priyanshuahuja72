@@ -1,13 +1,12 @@
-let output = document.getElementById("output");
 function promise1()
 {
     return new Promise((resolve , reject) => {
         setTimeout(() => {
-           resolve(
-            output.innerHTML = "Hello, world!"
-           )
+           resolve("Hello, world!")
         }, 1000)
     })
 }
-}
-promise1();
+promise1().then((res)=>{
+    let output = document.getElementById("output");
+    output.innerHTML = `${res}`;
+});
